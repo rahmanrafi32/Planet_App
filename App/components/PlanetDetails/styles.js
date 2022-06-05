@@ -3,27 +3,17 @@ import spacing from "../../theme/spacing";
 import colors from "../../theme/colors";
 
 const styles = StyleSheet.create({
-    circle: {
-        width: 30,
-        height: 30,
-        borderRadius: 15,
-    },
-    item: {
-        flexDirection: "row",
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: spacing[4],
-    },
-    list: {
-        padding: spacing[2],
-    },
-    itemName: {
-        textTransform: 'uppercase',
-        marginLeft: spacing[2]
-    },
-    separator: {
-        borderBottomWidth: .2,
-        borderBottomColor: colors.grey
+    planetDetails:{
+        width:350,
+        height:70,
+        flexDirection:'row',
+        alignItems:"center",
+        justifyContent:"space-between",
+        borderWidth:1,
+        borderColor:colors.grey,
+        marginBottom:spacing[2],
+        marginTop:spacing[2],
+        padding:spacing[3]
     }
 });
 

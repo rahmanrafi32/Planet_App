@@ -1,23 +1,20 @@
-import {View, StyleSheet, StatusBar} from 'react-native';
+import {View, StatusBar} from 'react-native';
 
-import colors from "../../theme/colors";
+import styles from "./styles";
 import HeaderText from "../../components/HeaderText";
-import PlanetDetails from "../../components/PlanetDetails";
-
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: colors.black
-    },
-});
+import PlanetList from "../../components/PlanetList";
+import Search from "../../components/Search";
+import {useState} from "react";
+import {PLANET_LIST} from "../../data/planetList";
 
 const Homescreen = () => {
+    const [list, setList] = useState(PLANET_LIST);
     return (
         <View style={styles.container}>
             <StatusBar animated={true} hidden={true}/>
             <HeaderText/>
-            <PlanetDetails/>
+            <Search list={list} setList={setList}/>
+            <PlanetList list={list}/>
         </View>
     );
 };
