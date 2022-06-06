@@ -4,8 +4,8 @@ import colors from "../../theme/colors";
 
 const styles = StyleSheet.create({
     planetDetails:{
-        width:350,
-        height:70,
+        width:'100%',
+        height:'10%',
         flexDirection:'row',
         alignItems:"center",
         justifyContent:"space-between",
